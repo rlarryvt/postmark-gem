@@ -311,6 +311,10 @@ module Postmark
       response
     end
 
+    def get_message_streams(options = {})
+      load_batch('message-streams', 'MessageStreams', options)
+    end
+
     protected
 
     def in_batches(messages)
